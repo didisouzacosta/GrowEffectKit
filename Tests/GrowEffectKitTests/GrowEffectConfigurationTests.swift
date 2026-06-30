@@ -21,4 +21,26 @@ final class GrowEffectConfigurationTests: XCTestCase {
 
         XCTAssertEqual(configuration.effectiveGlowColors.count, GrowEffectConfiguration.defaultGlowColors.count)
     }
+
+    func testCustomConfigurationStoresCallerValues() {
+        let configuration = GrowEffectConfiguration(
+            peakScale: 1.02,
+            duration: 2.1,
+            glowOpacity: 0.32,
+            glowColors: [.red, .blue],
+            cornerRadius: 18,
+            lineWidth: 6,
+            amplitude: 2.5,
+            minimumTimelineInterval: 1.0 / 24.0
+        )
+
+        XCTAssertEqual(configuration.peakScale, CGFloat(1.02))
+        XCTAssertEqual(configuration.duration, 2.1)
+        XCTAssertEqual(configuration.glowOpacity, 0.32)
+        XCTAssertEqual(configuration.cornerRadius, CGFloat(18))
+        XCTAssertEqual(configuration.lineWidth, CGFloat(6))
+        XCTAssertEqual(configuration.amplitude, 2.5)
+        XCTAssertEqual(configuration.minimumTimelineInterval, 1.0 / 24.0)
+        XCTAssertEqual(configuration.effectiveGlowColors.count, 2)
+    }
 }
