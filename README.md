@@ -1,6 +1,14 @@
 # GrowEffectKit
 
+<p align="center">
+  <img src="https://pub-81dc0daed73f4a358469301b9b80f493.r2.dev/apps/groweffectkit/app-icon.png" alt="GrowEffectKit logo" width="128">
+</p>
+
 SwiftUI package that provides an animated grow/glow effect backed by a bundled Metal shader.
+
+## Preview
+
+![GrowEffectKit preview](./Resources/preview.gif)
 
 ## Requirements
 
