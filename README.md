@@ -2,15 +2,29 @@
 
 SwiftUI package that provides an animated grow/glow effect backed by a bundled Metal shader.
 
+## Requirements
+
+- iOS 18.0+
+- macOS 15.0+
+- Swift 6.0+
+
 ## Installation
 
 Add the package with Swift Package Manager:
 
 ```text
-../GrowEffectKit
+https://github.com/didisouzacosta/GrowEffectKit.git
 ```
 
-For the DressMatch app, this package is linked as a local Swift package from `DressMatch.xcodeproj`.
+If you prefer SSH, use the repository remote:
+
+```text
+git@github.com:didisouzacosta/GrowEffectKit.git
+```
+
+In Xcode, choose **File > Add Package Dependencies...**, paste the repository URL, and add the `GrowEffectKit` library product to your app target.
+
+During local DressMatch development, this package can still be linked from a local checkout. For shared or CI builds, prefer the GitHub package URL above.
 
 ## Usage
 
@@ -40,3 +54,7 @@ let configuration = GrowEffectConfiguration(
 
 content.growEffect(isActive: isLoading, configuration: configuration)
 ```
+
+## License
+
+GrowEffectKit is available under the MIT license. See `LICENSE` for details.
